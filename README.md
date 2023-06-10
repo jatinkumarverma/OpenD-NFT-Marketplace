@@ -1,5 +1,24 @@
+# OpenD NFT Marketplace
 
-# To Install and Run the Project
+The OpenD NFT Marketplace is a decentralized application (dApp) built on the Internet Computer (IC) network. It allows users to buy, sell, and trade non-fungible tokens (NFTs) in a secure and transparent manner.
+
+## Features
+
+- **NFT Listing**: Users can list their NFTs for sale on the marketplace, including a detailed description and asking price.
+- **NFT Discovery**: Buyers can browse through the available NFTs, filter and sort them based on various criteria, and find the NFTs that match their interests.
+- **Bid and Offer**: Buyers can place bids or make offers on NFTs listed by sellers. Sellers have the option to accept or reject bids/offers.
+- **Secure Transactions**: All transactions on the OpenD NFT Marketplace are executed using smart contracts on the IC network, ensuring transparency and security.
+- **Escrow Service**: The marketplace acts as an escrow service, holding the buyer's funds until the NFT transfer is completed successfully.
+- **Wallet Integration**: Users can connect their IC-compatible wallets to the marketplace, allowing them to manage their NFTs and funds.
+
+## Prerequisites
+
+Before deploying the OpenD NFT Marketplace, ensure you have the following:
+
+- [Internet Computer SDK](https://sdk.dfinity.org/docs/quickstart/local-quickstart.html) installed and configured.
+- An IC-compatible wallet (e.g., [Internet Identity](https://sdk.dfinity.org/docs/quickstart/identity.html)).
+
+## To Install and Run the Project
 
 1. start local dfx
 
@@ -23,64 +42,9 @@ dfx deploy --argument='("CryptoDunks #123", principal "gbdev-tyqsv-hnvqv-7mgz4-4
 
 http://localhost:8080/
 
-# Minter Else HTML
 
-```
- <div className="minter-container">
-        <h3 className="Typography-root makeStyles-title-99 Typography-h3 form-Typography-gutterBottom">
-          Minted!
-        </h3>
-        <div className="horizontal-center">
-        </div>
-      </div>
 
-```
-
-# Loader HTML
-
-```
-<div className="lds-ellipsis">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-```
-
-# Button HTML
-
-```
-<div className="Chip-root makeStyles-chipBlue-108 Chip-clickable">
-            <span
-              onClick={}
-              className="form-Chip-label"
-            >
-              Sell
-            </span>
-            </div>
-```
-
-# Price Input HTML
-
-```
-<input
-        placeholder="Price in DANG"
-        type="number"
-        className="price-input"
-        value={}
-        onChange={}
-      />
-```
-
-# Price Label HTML
-
-```
-<div className="disButtonBase-root disChip-root makeStyles-price-23 disChip-outlined">
-          <span className="disChip-label">23 DANG</span>
-        </div>
-```
-
-# Creating NFT for Testing
+## Creating NFT for Testing
 
 1. Mint an NFT on the command line to get NFT into mapOfNFTs:
 
@@ -106,7 +70,7 @@ dfx canister id opend
 dfx canister call <REPLACE WITH NFT CANISTER ID> transferOwnership '(principal "<REPLACE WITH OPEND CANISTER ID>", true)'
 ```
 
-# Conneting to the Token Canister
+## Conneting to the Token Canister
 
 1. Copy over the token declarations folder
 
